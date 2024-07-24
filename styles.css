@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: #121212;
+  color: #E0E0E0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.background .symbol {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 2rem;
+  animation: float 10s infinite linear;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 50px;
+  z-index: 1;
+  position: relative;
+  background-color: rgba(18, 18, 18, 0.9); 
+  border-radius: 8px;
+}
+
+#profile-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 4rem;
+  white-space: nowrap;
+  border-right: .15em solid #E0E0E0;
+  overflow: hidden;
+  animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #E0E0E0;
+  }
+}
+
+h2 {
+  margin-top: 40px;
+  color: #FFDD44;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a {
+  color: #FFDD44;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.about,
+.projects,
+.reach-out {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  transition: background 0.3s;
+}
+
+.about:hover,
+.projects:hover,
+.reach-out:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-item {
+  display: block;
+  color: #FFDD44;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-item p {
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
