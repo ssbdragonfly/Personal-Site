@@ -255,15 +255,6 @@ html {
   right: 10px;
 }
 
-body {
-  cursor: url('assets/cursor-32.png'), auto;
-}
-
-a:hover,
-.project-item:hover {
-  cursor: url('assets/hand-cursor-32.png'), auto;
-}
-
 :root {
   --background-color: #121212;
   --text-color: #E0E0E0;
@@ -485,7 +476,6 @@ h2.light-mode {
   background: none;
   border: none;
   color: var(--link-color);
-  cursor: pointer;
 }
 
 .nav-menu.light-mode {
@@ -505,4 +495,22 @@ h2.light-mode {
 
   font-size: 2rem;
   animation: float 10s infinite linear;
+}
+
+body {
+  cursor: url('assets/cursor-32.png'), auto;
+}
+
+a:hover,
+.project-item:hover {
+  cursor: url('assets/hand-cursor-32.png'), auto;
+}
+
+body.light-mode {
+  cursor: url('assets/lightnormcursor.png'), auto;
+}
+
+body.light-mode a:hover,
+body.light-mode .project-item:hover {
+  cursor: url('assets/lightcursor.png'), auto;
 }
