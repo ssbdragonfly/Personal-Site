@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INVESTigator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>INVESTigator</h1>
+    <h2><i><b>A Community-Driven Investigation Platform</b></i></h2>
+    <div class="gallery">
+      <button class="nav-btn prev-btn">&#10094;</button>
+      <div class="gallery-wrapper">
+        <div class="gallery-slide">
+          <iframe src="https://www.youtube.com/embed/0MBFJZqZQc0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="gallery-slide">
+          <img src="assets/Investi-gator1.jpg" alt="Investi-gator Image 1">
+        </div>
+        <div class="gallery-slide">
+          <img src="assets/Investi-gator2.jpg" alt="Investi-gator Image 2">
+        </div>
+        <div class="gallery-slide">
+          <img src="assets/Investi-gator3.jpg" alt="Investi-gator Image 3">
+        </div>
+        <div class="gallery-slide">
+          <img src="assets/Investi-gator4.jpg" alt="Investi-gator Image 4">
+        </div>
+        <div class="gallery-slide">
+          <img src="assets/Investi-gator5.jpg" alt="Investi-gator Image 5">
+        </div>
+        <div class="gallery-slide">
+          <img src="assets/Investi-gator6.jpg" alt="Investi-gator Image 6">
+        </div>
+      </div>
+      <button class="nav-btn next-btn">&#10095;</button>
+    </div>
+    <p><b><i>INVESTigator</i></b> was inspired by the common missing person posters we see in our communities. This
+      platform aims to reduce the mental load on detectives by leveraging community contributions to ongoing
+      investigations. Witnesses can upload evidence, which is automatically filtered for relevance while preserving all
+      data. The system provides real-time data insights using websockets and multiprocessing, and includes features like
+      license plate detection, similarity analysis with detective databases, and audio analysis. We built it using
+      Django for the frontend, with HTML, CSS, and JS, along with an sqlite3 database. For a smooth user experience, we
+      integrated websockets and AJAX. The backend leverages PyTorch, TensorFlow, and OpenCV for data analysis. We used
+      an LSTM model for sentiment analysis and a CNN model for facial emotional analysis, combining sequential and
+      spatial data handling for comprehensive analysis. Despite challenges with integrating models and creating a
+      visually appealing interface, we are proud of our finished product. It’s an ambitious project that we’re excited
+      to share. I learned valuable skills in websockets, AJAX, and video analysis with ML. Looking ahead, I may develop
+      more accurate models, add features for holistic analysis, and enhance community engagement with an explore page
+      and data summarization.
+    </p>
+    <a class="back-to-home" href="index.html">Back to Home</a>
+  </div>
+  <script src="gallery.js"></script>
+</body>
+
+</html>
