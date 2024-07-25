@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const nameElement = document.getElementById("name");
     const name = "Shaurya Bisht";
     let index = 0;
+
     function typeName() {
         if (index < name.length) {
             nameElement.textContent += name.charAt(index);
@@ -30,5 +31,28 @@ document.addEventListener("DOMContentLoaded", function() {
             symbol.remove();
         }, 15000);
     }
-    setInterval(createSymbol, 100);
+    setInterval(createSymbol, 50);
+
+    const themeToggleButton = document.getElementById('theme-toggle');
+
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-mode');
+        document.querySelector('.container').classList.add('light-mode');
+        document.querySelector('.nav-menu').classList.add('light-mode');
+        themeToggleButton.textContent = 'Dark Mode';
+    }
+
+    themeToggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        document.querySelector('.container').classList.toggle('light-mode');
+        document.querySelector('.nav-menu').classList.toggle('light-mode');
+
+        if (document.body.classList.contains('light-mode')) {
+            themeToggleButton.textContent = 'Dark Mode';
+            localStorage.setItem('theme', 'light');
+        } else {
+            themeToggleButton.textContent = 'Light Mode';
+            localStorage.setItem('theme', 'dark');
+        }
+    });
 });
